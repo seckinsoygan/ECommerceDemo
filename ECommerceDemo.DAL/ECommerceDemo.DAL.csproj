@@ -19,8 +19,4 @@
     <ProjectReference Include="..\ECommerceDemo.Entities\ECommerceDemo.Entities.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
