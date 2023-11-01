@@ -9,11 +9,12 @@ namespace ECommerceDemo.BLL.DependencyResolvers
     {
         public static IServiceCollection AddIdentityService(this IServiceCollection services)
         {
-            services.AddIdentity<AppUser, IdentityRole>(x =>
+            services.AddIdentity<AppUser, IdentityRole<int>>(x =>
             {
                 x.Password.RequiredUniqueChars = 0;
                 x.Password.RequiredLength = 8;
             }).AddEntityFrameworkStores<AppDbContext>();
+
             return services;
         }
     }
