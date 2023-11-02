@@ -1,4 +1,6 @@
-var builder = WebApplication.CreateBuilder(args);
+using ECommerceDemo.BLL.DependencyResolvers;
+
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
@@ -7,7 +9,19 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+builder.Services.AddDbContextService();
+builder.Services.AddIdentityService();
+builder.Services.AddRepositoryManagerServices();
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(x =>
+{
+    x.IdleTimeout = TimeSpan.FromMinutes(2);
+    x.Cookie.HttpOnly = true;
+    x.Cookie.IsEssential = true;
+});
+
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -19,6 +33,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllers();
 

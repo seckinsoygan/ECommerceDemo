@@ -12,7 +12,7 @@ namespace ECommerceDemo.DAL.Configurations
             builder.HasKey(x => new
             {
                 x.ProductId,
-                x.OrderId,
+                x.OrderId
             });
         }
     }
