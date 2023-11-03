@@ -14,17 +14,19 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.13" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ECommerceDemo.BLL\ECommerceDemo.BLL.csproj" />
-    <ProjectReference Include="..\ECommerceDemo.DAL\ECommerceDemo.DAL.csproj" />
     <ProjectReference Include="..\ECommerceDemo.Entities\ECommerceDemo.Entities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <Folder Include="Models\Products\ResponseModels\" />
+    <Folder Include="Models\Products\RequestModels\" />
+    <Folder Include="Models\ShoppingTools\" />
   </ItemGroup>
 
 </Project>

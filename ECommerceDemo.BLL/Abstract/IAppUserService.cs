@@ -4,6 +4,6 @@ namespace ECommerceDemo.BLL.Abstract
 {
     public interface IAppUserService : IService<AppUser>
     {
-        Task<bool> CreateUser(AppUser user);
+        Task<bool> CreateUserAsync(AppUser user);
     }
 }

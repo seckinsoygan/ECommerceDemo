@@ -12,7 +12,7 @@ namespace ECommerceDemo.BLL.Concrete
             _repository = appUserRepository;
         }
 
-        public async Task<bool> CreateUser(AppUser user)
+        public async Task<bool> CreateUserAsync(AppUser user)
         {
             return await _repository.AddUser(user);
         }
