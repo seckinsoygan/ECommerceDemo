@@ -24,8 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Products\ResponseModels\" />
-    <Folder Include="Models\Products\RequestModels\" />
     <Folder Include="Models\ShoppingTools\" />
   </ItemGroup>
 
