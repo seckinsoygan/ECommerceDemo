@@ -43,5 +43,10 @@ namespace ECommerceDemo.DAL.Repositories.Concrete
             _context.Update(entity);
             _context.SaveChanges();
         }
+
+        public T GetById(int id)
+        {
+            return _context.Set<T>().Find(id);
+        }
     }
 }

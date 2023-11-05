@@ -35,6 +35,11 @@ namespace ECommerceDemo.BLL.Concrete
             return _repository.GetAsync(filter);
         }
 
+        public T Get(int id)
+        {
+            return _repository.GetById(id);
+        }
+
         public void Update(T entity)
         {
             _repository.Update(entity);

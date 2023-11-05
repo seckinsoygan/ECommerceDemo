@@ -26,7 +26,7 @@ namespace ECommerceDemo.BLL.DependencyResolvers
             services.AddScoped<IOrderService, OrderManager>();
 
             services.AddScoped<IOrderDetailRepository, OrderDetailRepository>();
-            services.AddScoped<IOrderService, OrderManager>();
+            services.AddScoped<IOrderDetailService, OrderDetailManager>();
 
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductService, ProductManager>();

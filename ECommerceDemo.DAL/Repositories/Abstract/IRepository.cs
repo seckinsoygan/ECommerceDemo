@@ -7,6 +7,7 @@ namespace ECommerceDemo.DAL.Repositories.Abstract
     {
         IQueryable<T> GetAllAsync(Expression<Func<T, bool>> filter = null);
         Task<T> GetAsync(Expression<Func<T, bool>> filter);
+        T GetById(int id);
         Task AddAsync(T entity);
         void Update(T entity);
         void Delete(T entity);
